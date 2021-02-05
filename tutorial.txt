@@ -1,13 +1,17 @@
-Aponta o dominio na Registro Br para os DNS da cloundflare
+### MUDANÇA DE DNS ###
 
-No site  da cloundflare
+- Aponta o dominio na Registro Br para os DNS da cloundflare
+
+- No site  da cloundflare
 Coloca o DNS fazendo apontamento para o IP atual do servidor
-Padrão: 
-A dominio.com 179.110.46.203 Auto Com proxy
+- Padrão: 
+- A dominio.com 179.110.46.203 Auto Com proxy
 
-HABILITAR A TROCA DE IP AUTOMATICAMENTE
+Nessa etapa o site já tem vai estar funcionando normalmente
 
-Gerar um token de API:
+### HABILITAR A TROCA DE IP AUTOMATICAMENTE USANDO O DOCKER ## 
+
+### GERANDO API ####
 Faça o login no painel Cloudflare.
 No menu suspenso Meu Perfil, clique em Meu Perfil.
 Clique na guia Tokens de API .
@@ -17,5 +21,22 @@ Em RECURSOS DE ZONA seleciona o dominio
 Clica em continuar até o resumo, depois em Criar Token
 Copia o token gerado.
 
-VJvDeaESYfxMSpAYyUsoZe00QDOBfDnP7GCUUr38
+### INSTALAÇÃO DO DOCKER ###
+Só adicionar o repositório e instalar via apt
+https://docs.docker.com/engine/install/ubuntu/
+Apos instale o docker-compose
+sudo apt install docker-compose
+Comando docker ps para ver se está instalado corretamente
+
+
+### NOS ARQUIVOS QUE MANDEI ####
+Copiar o token gerado no arquivo .env no lugar do token
+Colocar o seu dominio no arquivo .env
+
+Rodar o arquivo start.sh
+ou dar o comando
+sudo docker-compose up -d
+
+Com o comando docker ps
+da pra ver se está rodando o container
 
